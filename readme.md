@@ -56,14 +56,14 @@ off-button.service                                     loaded active running   O
 ...
 ...
 pi@pi:~ $ sudo service off-button status
- * off-button.service - Off button service
+● off-button.service - Off button service
    Loaded: loaded (/etc/systemd/system/off-button.service; enabled)
-   Active: active (running) since Thu 2016-03-10 15:47:50 GMT+8; 3 days ago
- Main PID: 313 (off-button.py)
+   Active: active (running) since Mon 2016-03-14 14:12:31 GMT+8; 4s ago
+ Main PID: 28771 (off-button.py)
    CGroup: /system.slice/off-button.service
-           └─313 /usr/bin/python /home/pi/raspbian-off-button/off-button.py
+           └─28771 /usr/bin/python /home/pi/raspbian-off-button/off-button.py
 
-Mar 10 15:47:50 tracer systemd[1]: Started Off button service.
+Mar 14 14:12:31 tracer systemd[1]: Started Off button service.
 pi@pi:~ $ sudo service off-button stop
 pi@pi:~ $ sudo service off-button start
 ```
@@ -76,11 +76,11 @@ pi@pi:~ $ sudo service off-button start
 
 #### Raspbian Wheezy & earlier
 
-In Raspbian Wheezy (based on Debian 7) the recommended method of aut0-starting this
-script is to schedule an "@reboot" cron task. Since the script requires root-level
+In Raspbian Wheezy (based on Debian 7) the recommended method of auto-starting this
+script is to schedule an "`@reboot`" cron task. Since the script requires root-level
 permissions for GPIO access, and since does not interact with logged-in users or the
 file system, this is a reasonably robust and secure compromise. (It's worth noting
-the "@reboot" method provides no way to stop or restart this script!)
+this method provides no way to stop or restart this script!)
 
 > Services in Raspbian Wheezy are controlled by `initd`. While it is possible to
 > turn scripts into services with initd, the additional legwork required means it
