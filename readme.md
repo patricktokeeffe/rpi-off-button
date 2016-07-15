@@ -13,17 +13,18 @@ wires will do.
 
 ### Installation
 
-Fetch this repository from source, then enter the directory and grant executable
-permissions to `off-button.py`.
+Fetch this repository from source, copy script to system directory (under new
+file name) and grant installed file executable permissions.
 
 ````
-pi@pi:~ $ git clone https://bitbucket.org/patricktokeeffe/raspbian-off-button.git
-Cloning into 'raspbian-off-button'...
+pi@pi:~ $ git clone https://bitbucket.org/patricktokeeffe/rpi-off-button.git
+Cloning into 'rpi-off-button'...
 ...
-pi@pi:~ $ cd raspbian-off-button
-pi@pi:~/raspbian-off-button $ ls
+pi@pi:~ $ cd rpi-off-button
+pi@pi:~/rpi-off-button $ ls
 off-button.py  off-button.service  readme.md
-pi@pi:~/raspbian-off-button $ sudo chmod +x off-button.py
+pi@pi:~/rpi-off-button $ sudo cp off-button.py /usr/sbin/off-button
+pi@pi:~/rpi-off-button $ sudo chmod +x /usr/sbin/off-button
 ````
 
 #### Raspbian Jessie
@@ -39,10 +40,10 @@ must do is copy it into the proper directory (`/etc/systemd/system`), then enabl
 run-at-boot for it (`systemctl enable`):
 
 ```
-pi@pi:~/raspbian-off-button $ ls
+pi@pi:~/rpi-off-button $ ls
 off-button.py  off-button.service  readme.md
-pi@pi:~/raspbian-off-button sudo cp off-button.service /etc/systemd/system/
-pi@pi:~/raspbian-off-button sudo systemctl enable off-button.service
+pi@pi:~/rpi-off-button sudo cp off-button.service /etc/systemd/system/
+pi@pi:~/rpi-off-button sudo systemctl enable off-button.service
 ...
 ```
 

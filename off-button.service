@@ -3,7 +3,7 @@ Description=Off button service
 
 [Service]
 Type=simple
-ExecStart=/home/pi/raspbian-off-button/off-button.py
+ExecStart=/usr/sbin/off-button
 
 [Install]
 WantedBy=multi-user.target
