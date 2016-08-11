@@ -115,8 +115,9 @@ pi@pi:~ $ sudo crontab -e
 command to run in the background.)
 
 ````
-@reboot /home/pi/raspbian-off-button/off-button.py &
+@reboot python /the/full/path/to/off-button.py &
 ````
 
-Save and exit (^X, Y) to make changes effective.
-
+Of course, you should specify the *actual* path, which may be something like
+`/home/pi/rpi-off-button/off-button.py`. Save and exit (^X, Y) to make changes
+effective.
