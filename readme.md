@@ -11,6 +11,24 @@ wires will do.
 
 > *Paper clips/screwdrivers/what-have-you are not recommended!*
 
+### Quick Install
+
+**If and only if** you are using `systemd` (default in Raspbian Jessie and
+newer), you can install this service in two steps:
+
+1. Clone this repo:
+   `git clone https://bitbucket.org/patricktokeeffe/rpi-off-button.git`
+2. Run install script:
+
+```
+$ cd rpi-off-button
+$ sudo ./install.sh
+```
+
+> The install script was made executable before committing but if you do
+> encounter "command not found" errors when trying to run step 2, then
+> try this first: `sudo chmod +x install.sh`.
+
 ### Installation
 
 Fetch this repository from source, copy script to system directory (under new
