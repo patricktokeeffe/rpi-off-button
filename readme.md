@@ -17,7 +17,7 @@ wires will do.
 newer), you can install this service in two steps:
 
 1. Clone this repo:
-   `git clone https://bitbucket.org/patricktokeeffe/rpi-off-button.git`
+   `git clone https://github.com/patricktokeeffe/rpi-off-button.git`
 2. Run install script:
 
 ```
